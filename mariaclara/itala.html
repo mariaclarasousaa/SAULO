@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Medalhas</title>
+    <link rel="stylesheet" href="style/style1.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+      }
+      
+      .frequencia {
+        max-width: 500px;
+        margin: 30px auto;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+      
+      h1 {
+        font-size: 1.5em;
+        color: #333;
+      }
+      
+      p {
+        font-size: 1em;
+        color: #555;
+      }
+      
+      .descricao {
+        margin: 15px 0;
+      }
+      
+      .descricao input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1em;
+      }
+      
+      .lista-presenca {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+      }
+      
+      .lista-presenca li {
+        margin-bottom: 10px;
+      }
+      
+      label {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background: #f9f9f9;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      
+      input[type="checkbox"] {
+        display: none;
+      }
+      
+      input[type="checkbox"] + span {
+        margin-left: 10px;
+        font-size: 1em;
+        color: #333;
+      }
+      
+      input[type="checkbox"]:checked + span {
+        color: #fff;
+      }
+      
+      input[type="checkbox"]:checked + span::before {
+        content: "✓ ";
+        color: #fff;
+      }
+      
+      label:hover {
+        background: #e6e6e6;
+      }
+      
+      input[type="checkbox"]:checked + span {
+        background: #4caf50;
+        padding: 5px;
+        border-radius: 4px;
+      }
+</style>
+<body>
+    <header>
+        <div class="container">
+            <header>
+                <button class="back-button">&larr;</button>
+            </header>
+            <div class="profile-card">
+                <img src="https://i.postimg.cc/YqZRcWbS/itala.jpg" alt="Foto do Usuário" class="profile-image">
+                <h2>Ítala Lima Correia</h2>
+            </div>
+            <div class="medals-list">
+                <details class="medal">
+                    <summary>
+                        <span class="medal-icon">🥇</span>
+                        <span class="medal-text">Ouro</span>
+                    </summary>
+                        <span class="medal-info">Copa Cariri de Jiu-Jitsu 2024</span>
+                </details>
+            <div class="medal-item">
+                <details class="medal">
+                    <summary>
+                        <span class="medal-icon">🥈</span>
+                        <span class="medal-text">Prata</span>
+                    </summary>
+                        <span class="medal-info">Copa Cariri de Jiu-Jitsu 2024</span>
+                </details>
+            </div>
+            <div class="medal-item">
+                <details class="medal">
+                    <summary>
+                        <span class="medal-icon">🥉</span>
+                        <span class="medal-text">Bronze</span>
+                    </summary>
+                        <span class="medal-info"></span>
+                </details>
+            </div>
+        </div>
+    </div>
+    </header>
+</body>
+</html>

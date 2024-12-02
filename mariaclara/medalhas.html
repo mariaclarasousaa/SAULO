@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medalhas - Turma 01</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #63BB7E;
+    }
+    .back-arrow {
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        font-size: 18px;
+        text-decoration: none;
+        color: #000000;
+        font-weight: bold;
+    }
+
+
+    .back-arrow:hover {
+        color: #1d8649;
+    }
+
+
+    .container {
+        max-width: 400px;
+        margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+        padding: 20px;
+    }
+
+
+    .header {
+      text-align: center;
+      padding: 10px;
+      color: rgb(0, 0, 0);
+      border-radius: 8px 8px 0 0;
+    }
+
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+
+    .dropdown {
+      margin-top: 20px;
+      text-align: left;
+      font-size: 20px;
+
+    }
+
+
+    .dropdown select {
+        padding: 8px 12px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        background: none;
+        color: #000;
+    }
+
+
+    .list {
+        margin-top: 20px;
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        max-width: 90%; /* Limita a largura máxima */
+        margin-left: auto; /* Centraliza o elemento */
+        margin-right: auto; /* Centraliza o elemento */
+      }
+
+
+    .list-item {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+
+    .list-item:last-child {
+      border-bottom: none;
+    }
+
+
+    .list-item img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+
+    .name-box {
+      background-color: #F2F2F2;
+      padding: 8px 12px;
+      border-radius: 7px;
+      text-align: left;
+      font-weight: bold;
+      color: #726060;
+      width: 100%; /* Largura ajustada para ocupar todo o espaço disponível */
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between; /* Distribui o espaço entre o nome e a medalha */
+      align-items: center;
+    }
+
+
+    .medal {
+      background-color: #58b16eb4;
+      padding: 5px 10px;
+      border-radius: 12px;
+      color: black;
+      font-weight: bold;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    .header .icon {
+        width: 24px;
+        height: 24px;
+    }
+
+
+  </style>
+</head>
+<body>
+    <!-- Seta para voltar -->
+    <a href="pagina-anterior.html" class="back-arrow" onclick="alert('Voltando à página anterior');"> ᐸ </a>
+   
+    <div class="header">
+        <img src="https://i.postimg.cc/TPt1Vx4W/medalha.png" alt="Ícone de medalha" class="icon">
+        <h1 class="title">Medalhas</h1>
+    </div>
+
+
+    <div class="dropdown">
+      <label for="turma"></label>
+      <select id="turma">
+        <option>Turma 01</option>
+        <option>Turma 02</option>
+        <option>Turma 03</option>
+        <option>Turma 04</option>
+      </select>
+    </div>
+
+
+    <div class="list">
+        <div class="list-item">
+          <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto de Isabelly">
+          <div class="name-box">
+            Isabelly dos Santos Baia
+
+            <span class="medal">4</span>
+          </div>
+        </div>
+        <div class="list-item">
+            <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto de Ítala">
+            <div class="name-box">
+                <a href="itala.html" style="text-decoration: none; color: inherit;">Ítala Lima Correia</a>
+                <span class="medal">3</span>
+            </div>
+        </div>
+        <div class="list-item">
+          <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto de Jhoyce">
+          <div class="name-box">
+            Jhoyce Alcântara de Macêdo
+            <span class="medal">2</span>
+          </div>
+        </div>
+        <div class="list-item">
+            <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto de Isabelly">
+            <div class="name-box">
+              Maria Clara Araujo de Sousa
+              <span class="medal">4</span>
+            </div>
+        </div>
+        <div class="list-item">
+            <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto de Ítala">
+            <div class="name-box">
+              João Lima Costa
+              <span class="medal">3</span>
+            </div>
+        </div>
+        <div class="list-item">
+            <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto de Jhoyce">
+            <div class="name-box">
+              Lucas Pedro Furtado
+              <span class="medal">2</span>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+
+

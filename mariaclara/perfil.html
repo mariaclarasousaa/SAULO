@@ -31,7 +31,7 @@
         .back-arrow:hover {
             color: #1d8649; /* Muda a cor ao passar o mouse */
         }
-         .profile-pic {  /*EDITAR A IMAGEM*/
+        .profile-pic {  /*EDITAR A IMAGEM*/
             border-radius: 500%;
             width: 160px;
             height: 160px;
@@ -40,6 +40,7 @@
             display: block;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
             margin-bottom: 15px; /* Espaço entre a imagem e o cartão de perfil */
+            border: 2px solid black;  /* Adicionando borda preta */
         }
         .profile-card { 
             background-color: #63BB7E;
@@ -63,6 +64,7 @@
             border-radius: 9px;
             border: none;
             color: grey;
+            background-color: #f0f0f0; /* Cor de fundo do campo */
         }
         h2 {
             text-align: center; /* Centraliza o título */
@@ -105,13 +107,14 @@
 </head>
 <body>
      <!-- Seta para voltar -->
-     <a href="pagina-anterior.html" class="back-arrow" onclick="alert('Voltando à página anterior');"> ᐸ </a>
+      <a href="#" class="back-arrow" onclick="history.back();"> ᐸ </a>
+
 
      <!-- Lupa no canto superior direito -->
      <i class="fas fa-search search-icon"></i>
 
     <!-- Imagem de Perfil - fora da área verde, acima do cartão -->   
-    <img src="https://i.postimg.cc/dVB5rSbP/saulo.jpg" alt="Foto de Perfil" class="profile-pic">
+    <img src="https://i.postimg.cc/ryd49mfx/transferir.jpg" alt="Foto de Perfil" class="profile-pic">
 
      <h2>Olá, Saulo Bezerra!</h2>
     <!--  área verde -->
@@ -119,19 +122,37 @@
        
         <form>
             <label for="name">Nome</label>
-            <input type="text" id="name" value="">
+            <input type="text" id="name" value="Saulo Bezerra" disabled>
             
             <label for="email">E-mail</label>
-            <input type="email" id="email" value="">
+            <input type="email" id="email" value="saulo@example.com" disabled>
             
             <label for="password">Senha</label>
-            <input type="password" id="password" value="">
+            <input type="password" id="password" value="******" disabled>
             
             <label for="phone">Telefone (opcional)</label>
-            <input type="tel" id="phone" placeholder="">
+            <input type="tel" id="phone" value="(99) 99999-9999" disabled>
             
-            <button type="button" class="btn">Alterar dados</button>
+            <button type="button" class="btn" id="editBtn">Alterar dados</button>
         </form>
     </div>
+
+    <script>
+        // Função para alternar a edição dos campos
+        document.getElementById('editBtn').addEventListener('click', function() {
+            const inputs = document.querySelectorAll('input');
+            const isDisabled = inputs[0].disabled;
+
+            // Alterna o estado de habilitação dos campos
+            inputs.forEach(input => input.disabled = !isDisabled);
+
+            // Altera o texto do botão
+            if (isDisabled) {
+                this.textContent = 'Salvar dados';
+            } else {
+                this.textContent = 'Alterar dados';
+            }
+        });
+    </script>
 </body>
 </html>
