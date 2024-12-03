@@ -35,11 +35,13 @@
 
 
     .header {
-      text-align: center;
-      padding: 10px;
+      display: flex;
+      align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+      justify-content: center; /* Centraliza os itens horizontalmente */
+      padding: 20px;
       color: rgb(0, 0, 0);
       border-radius: 8px 8px 0 0;
-    }
+    }    
 
 
     .title {
@@ -52,8 +54,9 @@
       margin-top: 20px;
       text-align: left;
       font-size: 20px;
-
+      margin-left: 20px; /* espaçamento de TURMA 01 */
     }
+    
 
 
     .dropdown select {
@@ -69,19 +72,20 @@
     .list {
         margin-top: 20px;
         background: white;
-        border-radius: 10px;
+        border-radius: 40px 40px 0 0; /* Aplica bordas arredondadas apenas nas bordas superiores */
         padding: 15px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        max-width: 90%; /* Limita a largura máxima */
+        max-width: 100%; /* Limita a largura máxima */
         margin-left: auto; /* Centraliza o elemento */
         margin-right: auto; /* Centraliza o elemento */
+        min-height: 800px; /* Aumente a altura mínima para 500px ou ajuste conforme necessário */
       }
 
 
     .list-item {
       display: flex;
       align-items: center;
-      padding: 10px;
+      padding: 16px;
       border-bottom: 1px solid #f0f0f0;
     }
 
@@ -140,7 +144,7 @@
     <a href="pagina-anterior.html" class="back-arrow" onclick="alert('Voltando à página anterior');"> ᐸ </a>
    
     <div class="header">
-        <img src="https://i.postimg.cc/TPt1Vx4W/medalha.png" alt="Ícone de medalha" class="icon">
+        <img src="https://i.postimg.cc/T1QLHw3m/medalha.png" alt="Ícone de medalha" class="icon">
         <h1 class="title">Medalhas</h1>
     </div>
 
@@ -158,7 +162,7 @@
 
     <div class="list">
         <div class="list-item">
-          <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto de Isabelly">
+          <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto">
           <div class="name-box">
             Isabelly dos Santos Baia
 
@@ -166,40 +170,61 @@
           </div>
         </div>
         <div class="list-item">
-            <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto de Ítala">
+            <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto">
             <div class="name-box">
                 <a href="itala.html" style="text-decoration: none; color: inherit;">Ítala Lima Correia</a>
                 <span class="medal">3</span>
             </div>
         </div>
         <div class="list-item">
-          <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto de Jhoyce">
+          <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto">
+          <div class="name-box">
+              <a href=".html" style="text-decoration: none; color: inherit;">Felipe Sousa</a>
+              <span class="medal">3</span>
+          </div>
+      </div>
+        <div class="list-item">
+          <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto">
           <div class="name-box">
             Jhoyce Alcântara de Macêdo
             <span class="medal">2</span>
           </div>
         </div>
         <div class="list-item">
-            <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto de Isabelly">
+            <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto">
             <div class="name-box">
               Maria Clara Araujo de Sousa
               <span class="medal">4</span>
             </div>
         </div>
         <div class="list-item">
-            <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto de Ítala">
+            <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto">
             <div class="name-box">
-              João Lima Costa
+              Ana Sofia Carvalho Alves
               <span class="medal">3</span>
             </div>
         </div>
         <div class="list-item">
-            <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto de Jhoyce">
+            <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto">
             <div class="name-box">
               Lucas Pedro Furtado
               <span class="medal">2</span>
             </div>
         </div>
+        <div class="list-item">
+          <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto">
+          <div class="name-box">
+            Beatriz Ribeiro Lima
+            <span class="medal">2</span>
+          </div>
+      </div>
+      <div class="list-item">
+        <img src="https://i.postimg.cc/J75JTsd9/do-utilizador.png" alt="Foto">
+        <div class="name-box">
+          Fernando José Rodrigues Santos
+          <span class="medal">2</span>
+        </div>
+    </div>
     </div>
 
 

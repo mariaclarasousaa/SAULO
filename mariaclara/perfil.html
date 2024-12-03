@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil do professor</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Link para LUPA -->
+    <link rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;  /* FUNDO DA TELA */
@@ -32,20 +32,19 @@
             color: #1d8649; /* Muda a cor ao passar o mouse */
         }
         .profile-pic {  /*EDITAR A IMAGEM*/
-            border-radius: 500%;
+            border-radius: 50%;  /* Garante que a imagem seja redonda */
             width: 160px;
             height: 160px;
             object-fit: cover;
-            margin: 1 auto;
+            margin: 250px auto 15px;  /* Aumente o valor de margin-top para descer mais a imagem */
             display: block;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            margin-bottom: 15px; /* Espaço entre a imagem e o cartão de perfil */
-            border: 2px solid black;  /* Adicionando borda preta */
         }
+        
         .profile-card { 
             background-color: #63BB7E;
-            border-radius: 10px;
-            width: 300px;
+            border-radius: 50px 50px 0 0;  /* Aplica bordas arredondadas apenas nas bordas superiores */
+            width: 100%;  /* A caixa ocupa toda a largura disponível */
             padding: 20px;
             box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
             text-align: left;
@@ -53,15 +52,20 @@
             font-size: 15px;
             font-weight: 600;
             font-family: Arial, Helvetica, sans-serif; /* CAIXA VERDE */
+            min-height: 800px; /* Aumente a altura mínima conforme necessário */
         }
+        
+        
+        
+        
         input[type="text"],
         input[type="email"],
         input[type="password"],
         input[type="tel"] {
-            width: 93%; /* editar tamanho das caixas */
+            width: 96%; /* editar tamanho das caixas */
             padding: 10px;
             margin: 10px 0;
-            border-radius: 9px;
+            border-radius: 10px;
             border: none;
             color: grey;
             background-color: #f0f0f0; /* Cor de fundo do campo */
@@ -80,8 +84,8 @@
             border-radius: 25px;
             cursor: pointer;
             width: 50%;
-            margin: 0 auto;
             display: block;
+            margin: 20px auto 15px;
             font-weight: bold;
         }
         .btn:hover {
@@ -89,19 +93,6 @@
             color: rgb(255, 255, 255);
         }
         
-        /* Lupa no canto superior direito */
-        .search-icon {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            font-size: 25px;
-            color: #000000;
-            cursor: pointer;
-        }
-
-        .search-icon:hover {
-            color: #1d8649; /* Muda a cor ao passar o mouse */
-        }
 
     </style>
 </head>
@@ -109,9 +100,6 @@
      <!-- Seta para voltar -->
       <a href="#" class="back-arrow" onclick="history.back();"> ᐸ </a>
 
-
-     <!-- Lupa no canto superior direito -->
-     <i class="fas fa-search search-icon"></i>
 
     <!-- Imagem de Perfil - fora da área verde, acima do cartão -->   
     <img src="https://i.postimg.cc/ryd49mfx/transferir.jpg" alt="Foto de Perfil" class="profile-pic">

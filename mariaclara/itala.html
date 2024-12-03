@@ -7,99 +7,132 @@
     <link rel="stylesheet" href="style/style1.css">
 </head>
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f9;
-      }
-      
-      .frequencia {
-        max-width: 500px;
-        margin: 30px auto;
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-      }
-      
-      h1 {
-        font-size: 1.5em;
-        color: #333;
-      }
-      
-      p {
-        font-size: 1em;
-        color: #555;
-      }
-      
-      .descricao {
-        margin: 15px 0;
-      }
-      
-      .descricao input {
-        width: 100%;
-        padding: 8px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        font-size: 1em;
-      }
-      
-      .lista-presenca {
-        list-style: none;
-        padding: 0;
-        margin: 20px 0;
-      }
-      
-      .lista-presenca li {
-        margin-bottom: 10px;
-      }
-      
-      label {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        background: #f9f9f9;
-        border-radius: 4px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        transition: background 0.3s;
-      }
-      
-      input[type="checkbox"] {
-        display: none;
-      }
-      
-      input[type="checkbox"] + span {
-        margin-left: 10px;
-        font-size: 1em;
-        color: #333;
-      }
-      
-      input[type="checkbox"]:checked + span {
-        color: #fff;
-      }
-      
-      input[type="checkbox"]:checked + span::before {
-        content: "✓ ";
-        color: #fff;
-      }
-      
-      label:hover {
-        background: #e6e6e6;
-      }
-      
-      input[type="checkbox"]:checked + span {
-        background: #4caf50;
-        padding: 5px;
-        border-radius: 4px;
-      }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #63BB7E; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container principal */
+.container {
+    width: 300%;
+    max-width: 350px;
+    background: white;
+    border-radius: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 40px;
+    padding-left: 60px;
+    
+}
+
+/* Botão de voltar */
+header {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #555;
+}
+
+/* Perfil do usuário */
+.profile-card {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border: 2px solid #63BB7E;
+}
+
+.profile-card h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+/* Lista de medalhas */
+.medals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.medal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+
+.medal:hover {
+    background-color: #c3fdc3;
+}
+
+.medal-icon {
+    font-size: 20px;
+}
+
+.medal-text {
+    flex-grow: 1;
+    margin-left: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.medal-info{
+    margin-top: 10px;
+    font-size: 1.0em;
+    color: #666;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.arrow {
+    font-size: 18px;
+    color: #aaa;
+}
+.gold {
+    color: #d4af37;
+  }
+  
+  .silver {
+    color: #c0c0c0;
+  }
+  
+  .bronze {
+    color: #cd7f32;
+  }
 </style>
 <body>
     <header>
         <div class="container">
             <header>
-                <button class="back-button">&larr;</button>
+      
+              <a href="medalhas.html" class="back-button">&larr;</a> <!-- Aqui é onde você coloca o link correto para voltar para a lista de medalhas -->
             </header>
             <div class="profile-card">
                 <img src="https://i.postimg.cc/YqZRcWbS/itala.jpg" alt="Foto do Usuário" class="profile-image">

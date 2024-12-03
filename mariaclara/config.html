@@ -60,19 +60,24 @@
             left: 20px;
             color: #333;
             text-decoration: none;
+            display: flex;
+            align-items: center; /* Alinha a seta e o texto verticalmente */
         }
 
         .back-btn:hover {
             color: #007b5f;
         }
-        
+
+        .back-btn i {
+            margin-right: 10px; /* Ajusta o espaçamento entre a seta e o texto */
+        }
 
     </style>
 </head>
 <body>
 
-    <!-- Botão para voltar -->
-    <a href="#" class="back-btn"><i class="fas fa-chevron-left"></i> Configurações</a>
+    <!-- Botão para voltar à tela anterior -->
+    <a href="index.html" class="back-btn"><i class="fas fa-chevron-left"></i> Voltar</a>
 
     <!-- Barra lateral -->
     <div class="sidebar">
