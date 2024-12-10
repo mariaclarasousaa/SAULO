@@ -17,9 +17,19 @@ body {
     font-family: Arial, sans-serif;
     background-color: #63BB7E; 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centraliza a caixa branca horizontalmente */
+    align-items: center; /* Centraliza a caixa branca verticalmente */
     height: 100vh;
+    margin: 0; /* Remover qualquer margem padrão */
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #63BB7E; 
+    display: flex;
+    justify-content: center; /* Centraliza a caixa branca horizontalmente */
+    align-items: center; /* Centraliza a caixa branca verticalmente */
+    height: 100vh;
+    margin: 0; /* Remover qualquer margem padrão */
 }
 
 /* Container principal */
@@ -32,8 +42,12 @@ body {
     overflow: hidden;
     padding: 40px;
     padding-left: 60px;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
+
 
 /* Botão de voltar */
 header {

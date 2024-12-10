@@ -43,7 +43,7 @@
         
         .profile-card { 
             background-color: #63BB7E;
-            border-radius: 50px 50px 0 0;  /* Aplica bordas arredondadas apenas nas bordas superiores */
+            border-radius: 65px 65px 0 0;  /* Aplica bordas arredondadas apenas nas bordas superiores */
             width: 100%;  /* A caixa ocupa toda a largura disponível */
             padding: 20px;
             box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
@@ -53,9 +53,11 @@
             font-weight: 600;
             font-family: Arial, Helvetica, sans-serif; /* CAIXA VERDE */
             min-height: 800px; /* Aumente a altura mínima conforme necessário */
+            min-height: 800px;
+            display: flex;
+            justify-content: center; /* Centraliza o conteúdo dentro da área verde */
+            align-items: center;
         }
-        
-        
         
         
         input[type="text"],
@@ -65,8 +67,9 @@
             width: 96%; /* editar tamanho das caixas */
             padding: 10px;
             margin: 10px 0;
-            border-radius: 10px;
+            border-radius: 9px;
             border: none;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
             color: grey;
             background-color: #f0f0f0; /* Cor de fundo do campo */
         }
@@ -92,7 +95,13 @@
             background-color: #1d8649; 
             color: rgb(255, 255, 255);
         }
-        
+
+        .form-container {
+            width: 92%; /*tamanho da caixa branca*/
+            max-width: 400px; /* Limita a largura do conteúdo */
+            text-align: left;
+            margin-top: -380px; /* Move o conteúdo mais para cima */
+        }
 
     </style>
 </head>
@@ -107,7 +116,8 @@
      <h2>Olá, Saulo Bezerra!</h2>
     <!--  área verde -->
     <div class="profile-card">
-       
+    <!-- Container para centralizar o conteúdo -->
+    <div class="form-container">
         <form>
             <label for="name">Nome</label>
             <input type="text" id="name" value="Saulo Bezerra" disabled>
@@ -124,6 +134,8 @@
             <button type="button" class="btn" id="editBtn">Alterar dados</button>
         </form>
     </div>
+</div>
+
 
     <script>
         // Função para alternar a edição dos campos
