@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Privacidade - App Jiujitsu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .back-btn {
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .back-btn i {
+            margin-right: 8px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 18px;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .content {
+            padding: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .privacy-section {
+            margin-bottom: 40px;
+        }
+
+        .privacy-section h2 {
+            font-size: 24px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .privacy-item {
+            margin-bottom: 20px;
+        }
+
+        .privacy-item h3 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .privacy-item p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .button-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .btn-accept, .btn-manage {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        .btn-accept:hover, .btn-manage:hover {
+            background-color: #2e7431;
+        }
+
+        .btn-manage {
+            background-color: #ff0800;
+        }
+
+        .btn-manage:hover {
+            background-color: #992929;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho com botão de voltar -->
+    <header>
+        <a href="config.html" class="back-btn"><i class="fas fa-chevron-left"></i></a>
+        <h1>Central de Privacidade</h1>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+        <!-- Seção de Informações sobre Privacidade -->
+        <div class="privacy-section">
+            <h2>Como usamos suas informações</h2>
+
+            <!-- Informações sobre a coleta de dados -->
+            <div class="privacy-item">
+                <h3>Coleta de Dados Pessoais</h3>
+                <p>Coletamos informações pessoais, como seu nome, email e preferências de uso, para melhorar sua experiência no aplicativo. Essas informações são utilizadas para personalizar seus treinos e recomendações dentro do app.</p>
+            </div>
+
+            <!-- Informações sobre o uso de dados -->
+            <div class="privacy-item">
+                <h3>Uso de Informações</h3>
+                <p>Suas informações são usadas para fornecer conteúdo personalizado, melhorar nossos serviços e enviar notificações sobre novos treinos e atualizações. Nunca compartilhamos suas informações com terceiros sem seu consentimento.</p>
+            </div>
+
+            <!-- Informações sobre proteção de dados -->
+            <div class="privacy-item">
+                <h3>Proteção de Dados</h3>
+                <p>Usamos medidas de segurança de última geração para proteger suas informações pessoais. Todos os dados são criptografados e armazenados de forma segura, com acesso restrito a pessoal autorizado.</p>
+            </div>
+
+            <!-- Políticas de cookies -->
+            <div class="privacy-item">
+                <h3>Política de Cookies</h3>
+                <p>Utilizamos cookies para melhorar sua experiência no aplicativo, como lembrar suas preferências e otimizar o desempenho. Você pode gerenciar suas preferências de cookies a qualquer momento nas configurações.</p>
+            </div>
+        </div>
+
+        <!-- Seção de opções de privacidade -->
+        <div class="button-container">
+            <a href="config.html" class="btn-accept">Aceitar</a>
+            <a href="gerenciar-privacidade.html" class="btn-manage">Gerenciar Preferências</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

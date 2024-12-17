@@ -61,7 +61,7 @@
             color: #333;
             text-decoration: none;
             display: flex;
-            align-items: center; /* Alinha a seta e o texto verticalmente */
+            align-items: center;
         }
 
         .back-btn:hover {
@@ -69,7 +69,7 @@
         }
 
         .back-btn i {
-            margin-right: 10px; /* Ajusta o espaçamento entre a seta e o texto */
+            margin-right: 10px;
         }
 
     </style>
@@ -77,20 +77,21 @@
 <body>
 
     <!-- Botão para voltar à tela anterior -->
-    <a href="index.html" class="back-btn"><i class="fas fa-chevron-left"></i> Voltar</a>
+    <a href="index.html" class="back-btn"><i class="fas fa-chevron-left"></i></a>
 
     <!-- Barra lateral -->
     <div class="sidebar">
         <div class="header">Configurações</div>
         <a href="#" class="menu-item"><i class="fas fa-home"></i><span>Home</span></a>
-        <a href="perfil.html" class="menu-item"><i class="fas fa-user"></i><span>Perfil</span></a> <!-- Alterado para linkar com a página de perfil -->
-        <a href="#" class="menu-item"><i class="fas fa-bell"></i><span>Notificação</span></a>
+        <a href="perfil.html" class="menu-item"><i class="fas fa-user"></i><span>Perfil</span></a>
+        <a href="notificacoes.html" class="menu-item"><i class="fas fa-bell"></i><span>Notificação</span></a>
         <a href="#" class="menu-item"><i class="fas fa-calendar"></i><span>Calendário</span></a>
         <a href="#" class="menu-item"><i class="fas fa-info-circle"></i><span>Sobre</span></a>
-        <a href="#" class="menu-item"><i class="fas fa-question-circle"></i><span>Ajuda</span></a>
+        <a href="ajuda.html" class="menu-item"><i class="fas fa-question-circle"></i><span>Ajuda</span></a>
         <a href="#" class="menu-item"><i class="fas fa-shield-alt"></i><span>Central de Privacidade</span></a>
         <a href="#" class="menu-item"><i class="fas fa-user-plus"></i><span>Adicionar conta</span></a>
-        <a href="#" class="menu-item"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
+        <!-- Link para a página de confirmação de saída -->
+        <a href="sair.html" class="menu-item"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
     </div>
 
 </body>
