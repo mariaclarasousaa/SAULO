@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazer login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 40px 30px;
+            width: 360px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: left;
+            min-height: 500px;
+            padding-top: 80px;
+        }
+        .login-container h1 {
+            font-size: 25px;
+            margin: 150px 0;
+            margin-top: 20px;
+            position: relative;
+            top: -18px;
+        }
+
+        .input-field {
+            width: 90%;
+            height: 40px;
+            padding: 10px;
+            font-size: 16px;
+            margin: 20px auto;
+            margin-top: 20PX;
+            border: 1px solid #dadce0;
+            display: block; /* Para garantir alinhamento central */
+            position: relative;
+            top: -130px; /* Subir a caixa de e-mail */
+            transition: top 0.5s ease;
+        }
+        .link {
+            color: #1a73e8;
+            font-size: 15px;
+            text-decoration: none;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        .forgot-email {
+            text-align: left;
+            position:absolute;  /* Faz o link se mover independentemente */
+            margin-bottom: 20px;
+            margin-top: -130px;
+            margin-left: 10px;
+
+        }
+        .button {
+            background-color: #1a73e8;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .footer-text {
+            font-size: 15px;
+            color: #5f6368;
+        }
+
+        .nome1 {
+            color: #5f6368;
+            margin-top: 150px;
+            position: relative;
+            top: -150px;
+        }
+
+        .action-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .action-row a {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="https://i.postimg.cc/0NM9TNcm/google.png" alt="Google Logo" width="60">
+        <h1>Fazer login</h1>
+        <p class="nome1">Use sua conta do Google</p>
+        <div>
+            <input type="text" class="input-field" placeholder="E-mail ou Telefone">
+        </div>
+        <div class="forgot-email">
+            <a href="#" class="link">Esqueceu seu e-mail?</a>
+        </div>
+        <p class="footer-text">
+            Não está no seu computador? Use o modo visitante para fazer login com privacidade. 
+            <a href="#" class="link">Saiba mais sobre como usar o Modo visitante.</a>
+        </p>
+        <div class="action-row">
+            <a href="#" class="link">Criar conta</a>
+            <button class="button">Avançar</button>
+        </div>
+    </div>
+</body>
+</html>

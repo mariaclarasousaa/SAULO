@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turma 01</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+        }
+
+
+        .container {
+            width: 90%;
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            margin-top: auto;
+            min-height: 600px;
+        }
+       
+   
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .header h1 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+
+        .header img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+       
+       
+        .description {
+            font-size: 14px;
+            color: gray;
+            margin: 5px 0 15px;
+        }
+
+
+        .title-with-icon{
+            display: flex;
+            align-items: center;
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+
+        .title-with-icon img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+
+
+       
+        .students-list {
+            list-style: none;
+            padding: 0;
+            margin: 60px 0 0;
+        }
+
+
+        .student-item {
+            display: flex;
+            align-items: center;
+            background-color: #e6e6e6;
+            padding: 20px 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            justify-content: flex-start;
+        }
+
+
+        .student-item img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+
+        .student-item span {
+            font-size: 16px;
+        }
+
+
+       
+        .register-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #d9d9d9;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+
+       
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+
+        .pagination .dot {
+            width: 8px;
+            height: 8px;
+            background-color: gray;
+            margin: 0 4px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Turma 01</h1>
+   
+            <img src="https://i.postimg.cc/zBXrPh2C/lupa-arredondada.png" alt="Ícone de pesquisa">
+        </div>
+
+
+   
+        <p class="description">Descrição: Aulas toda terça e quinta a partir das 18hrs</p>
+
+
+        <h3
+        class="title-with-icon">
+            <img src="https://i.postimg.cc/W4wWKfxK/comercial.png" alt="Alunos"> Alunos</h3>
+        <ul class="students-list">
+            <li class="student-item">
+                <img src="https://i.postimg.cc/GtW6rTKS/perfil-de-usuario.png" alt="Ícone aluno">
+                <span>Isabelly dos Santos Baia</span>
+            </li>
+            <li class="student-item">
+                <img src="https://i.postimg.cc/GtW6rTKS/perfil-de-usuario.png" alt="Ícone aluno">
+                <span>Itala Lima Correia</span>
+            </li>
+            <li class="student-item">
+                <img src="https://i.postimg.cc/GtW6rTKS/perfil-de-usuario.png" alt="Ícone aluno">
+                <span>Jhoyce Alcântara</span>
+            </li>
+            <li class="student-item">
+                <img src="https://i.postimg.cc/GtW6rTKS/perfil-de-usuario.png" alt="Ícone aluno">
+                <span>Mariana Duarte</span>
+            </li>
+            <li class="student-item">
+                <img src="https://i.postimg.cc/GtW6rTKS/perfil-de-usuario.png" alt="Ícone aluno">
+                <span>Maria Clara Araújo</span>
+            </li>
+        </ul>
+
+
+        <button class="register-button">
+            Cadastrar aluno
+            <img src="https://i.postimg.cc/L8Cw6Wx1/mais.png" alt="Ícone mais" style="width: 16px; height: 16px; vertical-align: middle;">
+        </button>
+        <div class="pagination">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+</body>
+</html>
