@@ -1,3 +1,8 @@
+<?php
+// Inicia a sessão
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -96,7 +101,6 @@
 
     <!-- Cabeçalho com botão de voltar -->
     <header>
-      
         <h1>Confirmar Saída</h1>
     </header>
 
@@ -107,7 +111,9 @@
 
         <!-- Botões de confirmação -->
         <div class="button-container">
-            <a href="index.html" class="btn-confirm">Confirmar</a>
+            <!-- O link agora chama o logout.php para efetuar o logout -->
+            <a href="logout.php" class="btn-confirm">Confirmar</a>
+            <!-- O link de cancelar redireciona para a página de configurações -->
             <a href="config.html" class="btn-cancel">Cancelar</a>
         </div>
     </div>

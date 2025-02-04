@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>08 de Outubro</h1>
+            <a href="novaaula.html">
+                <button>+</button>
+            </a>
+        </header>
+        <section class="notification">
+            <h2><center>Confira suas aulas programadas para hoje!</center></h2>
+            <div class="class-box blue">
+                <div class="class-header">
+                    <span>18:00 - 19:00: Aula de Defesa Pessoal</span>
+                    <span class="status">Concluída</span>
+                </div>
+                <ul>
+                    <li>Introdução à defesa pessoal</li>
+                    <li>Técnicas básicas de escapes</li>
+                    <li>Prática em duplas</li>
+                    <li>Discussão sobre a aplicação em situações reais</li>
+                </ul>
+            </div>
+            <div class="class-box purple">
+                <div class="class-header">
+                    <span>20:00 - 21:30: Aula de Técnicas Avançadas</span>
+                    <span class="status">Concluída</span>
+                </div>
+                <ul>
+                    <li>Revisão de técnicas de guarda</li>
+                    <li>Passagens de guarda (3 técnicas)</li>
+                    <li>Drills de sparring controlado</li>
+                    <li>Correções e feedback individual</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+    
+    body {
+        background-color: #f3f4f6;
+        color: #333;
+    }
+    
+    .container {
+        width: 90%;
+        max-width: 600px;
+        margin: 20px auto;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #4CAF50;
+        padding: 10px;
+        border-radius: 8px;
+        color: white;
+    }
+    
+    header h1 {
+        font-size: 18px;
+    }
+    
+    .back-arrow, .add-button {
+        font-size: 20px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .notification h2 {
+        margin: 15px 0;
+        font-size: 16px;
+    }
+    
+    .class-box {
+        background-color: #fff;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .class-box.blue {
+        border-left: 5px solid #7FC8FF;
+    }
+    
+    .class-box.purple {
+        border-left: 5px solid #D1A8FF;
+    }
+    
+    .class-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    
+    .status {
+        background-color: #e0e0e0;
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 12px;
+    }
+    
+    ul {
+        list-style-type: none;
+    }
+    
+    li {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    .add-a, button {
+        font-size: 14px;
+        background-color: #fff;
+        color: #4CAF50;
+        border: 2px solid #4CAF50;
+        border-radius: 8px;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    .add-a, button:hover {
+        background-color: #4CAF50;
+        color: #fff;
+
+    a.back-arrow {
+            position: absolute; /* Posiciona a seta no canto superior esquerdo */
+            top: 15px;
+            left: 20px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+        }
+    }
+</style>

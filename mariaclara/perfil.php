@@ -106,7 +106,6 @@
     </style>
 </head>
 <body>
-    
 
 
     <!-- Imagem de Perfil - fora da área verde, acima do cartão -->   

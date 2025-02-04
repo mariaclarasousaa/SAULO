@@ -33,11 +33,11 @@
         .profile {
             display: flex;
             align-items: center;
-            margin-bottom: 100px;
+            margin-bottom: 70px;
         }
         .profile img {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             margin-right: 10px;
         }
@@ -75,6 +75,16 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
+
+        .botao{
+                background-color: #f0f0f0;
+                border: none;
+                border-radius: 5px;
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                text-decoration: none;
+            }
         .grid button:hover {
             background-color: #e0e0e0;
         }
@@ -83,20 +93,7 @@
             height: 30px;
             margin-bottom: 10px;
         }
-        .menu {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 30px;
-            height: 30px;
-            background-color: #ccc;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-        .profile-pic {  /EDITAR A IMAGEM/
+        .profile-pic {  
             border-radius: 500%;
             width: 160px;
             height: 160px;
@@ -110,7 +107,6 @@
 </head>
 <body>
     <div class="container">
-        <div class="menu">☰</div>
         <div class="profile">
             <!-- Imagem de Perfil - fora da área verde, acima do cartão -->  
     <img src="https://i.postimg.cc/Rh53DDhG/IMG-20241126-WA0015.jpg" alt="Foto de Perfil" class="profile-pic">
@@ -120,30 +116,42 @@
             </div>
         </div>
         <div class="grid">
+            <a href="tela3.html" class="botao">
             <button>
-                <img src="https://i.postimg.cc/6qjfgFq7/usuarios-alt.png" alt="Ícone Turmas">
+                <img src="https://i.postimg.cc/6qjfgFq7/usuarios-alt.png" alt="Ícone Turmas"> 
                 Turmas
             </button>
+        </a>
+            <a href="tela4turma.html" class="botao">
             <button>
                 <img src="https://i.postimg.cc/mrsCXTjX/usuarios.png" alt="Ícone Alunos">
-                Alunos
+                Aluno
             </button>
+        </a>
+            <a href="config.html" class="botao">
             <button>
                 <img src="https://i.postimg.cc/L8qxK4zm/definicoes.png" alt="Ícone Configuração">
                 Configuração
             </button>
+        </a>
+            <a href="frequencia.html" class="botao">
             <button>
                 <img src="https://i.postimg.cc/Vv1hzyzD/verificar.png" alt="Ícone Frequência">
                 Frequência
             </button>
+        </a>
+            <a  href="horario.html" class="botao">
             <button>
                 <img src="https://i.postimg.cc/0yqfzTFs/relogio-calendario.png" alt="Ícone Horários">
                 Horários
             </button>
+        </a>
+        <a  href="medalhas.html" class="botao">
             <button>
                 <img src="https://i.postimg.cc/HWc4BWCm/medalha.png" alt="Ícone Medalhas">
                 Medalhas
             </button>
+        </a>
         </div>
     </div>
 </body>

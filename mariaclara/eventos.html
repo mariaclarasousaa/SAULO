@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendário</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+  <div class="calendar-container">
+    <!-- Cabeçalho do calendário -->
+    <div class="calendar-header">
+      <h2>Janeiro 2024</h2>
+    </div>
+
+    <!-- Tabela do calendário -->
+    <table class="calendar">
+      <thead>
+        <tr>
+          <th>Seg</th>
+          <th>Ter</th>
+          <th>Qua</th>
+          <th>Qui</th>
+          <th>Sex</th>
+          <th>Sáb</th>
+          <th>Dom</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td><td></td><td></td><td></td><td></td><td class="highlight">6</td><td>7</td>
+        </tr>
+        <tr>
+          <td>8</td><td>9</td><td>10</td><td>11</td><td class="event-day">12</td><td>13</td><td>14</td>
+        </tr>
+        <tr>
+          <td class="event-day">15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
+        </tr>
+        <tr>
+          <td class="event-day">22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
+        </tr>
+        <tr>
+          <td>29</td><td>30</td><td>31</td><td></td><td></td><td></td><td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Seção de eventos -->
+    <div class="events-section">
+      <div class="events-header">
+        <h3>Eventos</h3> 
+        <div class="event-buttons">
+            <!-- Botão para Excluir -->
+            <label for="deleteModal" class="button">🗑️</label>
+            <!-- Botão para Adicionar -->
+            <label for="addModal" class="button">+</label>
+        </div>
+    </div>
+
+      </div>
+        <div class="event">
+            <span>12</span>
+            <div class="event-details">
+                <h3>Aniversário</h3>
+                <p>Aluno Ítala Lima</p>
+            </div>
+        </div>
+        <div class="event">
+            <span>15</span>
+            <div class="event-details">
+                <h3>Aniversário</h3>
+                <p>Aluno Jhoyce Alcântara</p>
+            </div>
+        </div>
+        <div class="event">
+            <span>22</span>
+            <div class="event-details">
+                <h3>Aniversário</h3>
+                <p>Aluno Mariana Duarte</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal para Adicionar Evento -->
+    <input type="checkbox" id="addModal" class="modal-toggle">
+    <div class="modal">
+        <div class="modal-content">
+            <h3>Adicionar Evento</h3>
+            <form>
+                <label for="eventDate">Data:</label>
+                <input type="date" id="eventDate" name="eventDate" required>
+                <label for="eventDescription">Descrição:</label>
+                <input type="text" id="eventDescription" name="eventDescription" placeholder="Descrição do evento" required>
+                <div class="modal-buttons">
+                    <label for="addModal" class="button">Salvar</label>
+                    <label for="addModal" class="button">Cancelar</label>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para Excluir Evento -->
+    <input type="checkbox" id="deleteModal" class="modal-toggle">
+    <div class="modal">
+        <div class="modal-content">
+            <h3>Excluir Evento</h3>
+            <form>
+                <label>
+                    <input type="checkbox" name="deleteEvent" value="12"> Evento do dia 12: Aluno Ítala Lima
+                </label><br>
+                <label>
+                    <input type="checkbox" name="deleteEvent" value="15"> Evento do dia 15: Aluno Jhoyce Alcântara
+                </label><br>
+                <label>
+                    <input type="checkbox" name="deleteEvent" value="22"> Evento do dia 22: Aluno Mariana Duarte
+                </label><br>
+                <div class="modal-buttons">
+                    <label for="deleteModal" class="button">Apagar</label>
+                    <label for="deleteModal" class="button">Cancelar</label>
+                </div>
+            </form>
+
+        
+
+  </div>
+</body>
+</html>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+      
+      .calendar-container {
+        max-width: 400px;
+        margin: 20px auto;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      
+      .calendar-header {
+        background: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+      }
+      
+      .navigation button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+      
+      .calendar {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+      }
+      
+      .calendar th, .calendar td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        position: relative;
+      }
+      
+      .calendar th {
+        background: #f4f4f4;
+      }
+      
+      .calendar td.highlight {
+        background: #c8e6c9;
+        font-weight: bold;
+        color: #2e7d32;
+        border-radius: 50px;
+
+      }
+      
+
+      
+      .events-section {
+        padding: 10px;
+        background: #e8f5e9;
+      }
+      
+      .events-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      
+      .events-header h3 {
+        margin: 0;
+        font-size: 18px;
+        color: #388e3c;
+      }
+      
+      .event-buttons button {
+        background: #4CAF50;
+        border: none;
+        color: white;
+        font-size: 14px;
+        margin-left: 5px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      
+      .event-buttons button:hover {
+        background: #388e3c;
+      }
+      
+      .events-section ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .events-section li {
+        padding: 5px 0;
+        border-bottom: 1px solid #ddd;
+        font-size: 14px;
+      }
+      
+      .events-section li:last-child {
+        border-bottom: none;
+      }
+      li {
+        display: block;
+        background-color: #63BB7E;
+        height: 30px;
+        border: solid #F2F2F2 2px;
+        border-radius: 20px;
+    
+    }
+    .calendar td.event-day::before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: #4CAF50;
+        border-radius: 50%;
+        position: absolute;
+        top: 0.1px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+        .card {
+            background-color: #4CAF50;
+            color: #fff;
+            width: 300px;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .event {
+            display: flex;
+            align-items: center;
+            background-color: #7FCC96;
+            color: #333;
+            border-radius: 25px;
+            padding: 5px 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .event:last-child {
+            margin-bottom: 0;
+        }
+
+        .event span {
+            background-color: #ffffff;
+            color: #000000;
+            font-weight: bold;
+            border-radius: 50%;
+            padding: 10px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+        }
+
+        .event-details {
+            flex: 1;
+        }
+
+        .event-details h3 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .event-details p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .modal-toggle {
+            display: none;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-toggle:checked + .modal {
+            display: flex;
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .modal-content h3 {
+            margin-bottom: 20px;
+        }
+        
+        .event-buttons-buttons {
+            margin-top: 15px;
+        }
+        
+        .event-buttons .button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .event-buttons .button:hover {
+            opacity: 0.9;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 15px;
+        }
+
+        .icons button {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .icons button:hover {
+            opacity: 0.8;
+        }
+
+        .modal-toggle {
+            display: none;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 5;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-toggle:checked + .modal {
+            display: flex;
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .modal-content h3 {
+            margin-bottom: 20px;
+        }
+        
+        .modal-content form label {
+            display: block;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        
+        .modal-content form input[type="text"],
+        .modal-content form input[type="date"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .modal-buttons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .modal-buttons .button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        .modal-buttons .button.cancel {
+            background-color: #ccc;
+            color: #333;
+        }
+        
+        .modal-buttons .button:hover {
+            opacity: 0.9;
+        }
+</style>

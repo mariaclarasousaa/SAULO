@@ -1,3 +1,39 @@
+<?php
+// Configuração de conexão com o banco de dados
+$servername = "localhost"; // Altere para seu servidor de banco de dados
+$username = "root"; // Altere para seu usuário do banco de dados
+$password = ""; // Altere para sua senha, caso tenha
+$dbname = "nome_do_banco"; // Altere para o nome do seu banco de dados
+
+// Conecta ao banco de dados
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verifica a conexão
+if ($conn->connect_error) {
+    die("Conexão falhou: " . $conn->connect_error);
+}
+
+// Consultar dados de contato
+$sql = "SELECT * FROM contatos WHERE id = 1"; // Substitua por sua consulta real
+$result = $conn->query($sql);
+
+// Se os dados de contato forem encontrados
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $email_suporte = $row['email_suporte'];
+    $telefone_suporte = $row['telefone_suporte'];
+    $site = $row['site'];
+} else {
+    // Valores padrão caso não encontre nenhum dado no banco
+    $email_suporte = "suporte@jitsukaapp.com";  
+    $telefone_suporte = "(88) 1234-5678";  
+    $site = "https://www.jitsukaapp.com";  
+}
+
+// Fecha a conexão com o banco de dados
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -129,7 +165,7 @@
 
     <!-- Cabeçalho com botão de voltar -->
     <header>
-     
+        <a href="index.php" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
         <h1>Ajuda</h1>
     </header>
 
@@ -143,19 +179,15 @@
         <!-- Seção de FAQs -->
         <div class="faq-section">
             <h2>Perguntas Frequentes para Professores</h2>
-            <!-- FAQ 1 -->
             <div class="faq-item">
                 <h3>Como criar uma nova turma?</h3>
                 <p>Para criar uma nova turma, vá até a aba de "TURMAS" e clique em "+". Você será direcionado 
                 para tela de cadastro de turma, onde deverá colocar o nome da turma, informar o curso que você deseja ensinar, a data de emissão do curso e uma descrição (opcional) para a turma.</p>
             </div>
-            <!-- FAQ 2 -->
             <div class="faq-item">
                 <h3>Como monitorar o progresso dos alunos?</h3>
-                <p>Você pode monitorar o progresso dos alunos acessando a seção "Turma",
-                    onde poderá visualizar o desempenho deles nos treinos, o progresso nas técnicas e verificar as metas atingidas.</p>
+                <p>Você pode monitorar o progresso dos alunos acessando a seção "Turma", onde poderá visualizar o desempenho deles nos treinos, o progresso nas técnicas e verificar as metas atingidas.</p>
             </div>
-            <!-- FAQ 3 -->
             <div class="faq-item">
                 <h3>Como posso agendar aulas para os meus alunos?</h3>
                 <p>Para agendar aulas, vá até a seção "Horários" e clique em "+". Escolha a data, hora e alunos que participarão. As aulas agendadas serão notificadas para os alunos automaticamente.</p>
@@ -166,16 +198,18 @@
         <div class="contact-section">
             <h2>Contato e Suporte</h2>
             <div class="contact-item">
-                <i class="fas fa-envelope"></i> Email de Suporte: <strong>suporte@jitsukaapp.com</strong>
+                <i class="fas fa-envelope"></i> Email de Suporte: <strong><?php echo $email_suporte; ?></strong>
             </div>
             <div class="contact-item">
-                <i class="fas fa-phone"></i> Telefone de Suporte: <strong>(88) 1234-5678</strong>
+                <i class="fas fa-phone"></i> Telefone de Suporte: <strong><?php echo $telefone_suporte; ?></strong>
             </div>
             <div class="contact-item">
-                <i class="fas fa-globe"></i> Visite nosso site: <a href="https://www.jitsukaapp.com" target="_blank">www.jitsukaapp.com</a>
+                <i class="fas fa-globe"></i> Visite nosso site: <a href="<?php echo $site; ?>" target="_blank"><?php echo $site; ?></a>
             </div>
         </div>
 
+        <!-- Botão de voltar ao site -->
+        <a href="index.php" class="back-btn-footer">Voltar</a>
     </div>
 
 </body>
